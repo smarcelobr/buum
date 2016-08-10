@@ -1,0 +1,18 @@
+<div id="instrucoes" ng-controller="InstrucoesCtrl">
+	<p><a href="" ng-click="mostrarInstrucoes=!mostrarInstrucoes">Como &eacute; que se joga isso?</a></p>
+	<div ng-show="mostrarInstrucoes">
+		<h3>Instru&ccedil;&otilde;es</h3>
+		<p>O objetivo do jogo &eacute; descobrir o c&oacute;digo secreto usando racioc&iacute;nio l&oacute;gico. Voc&ecirc; tem apenas 6 tentativas para ach&aacute;-lo.</p>
+		<p>S&atilde;o 6 s&iacute;mbolos dispon&iacute;veis para formar o c&oacute;digo: <span class="glyphicon glyphicon-leaf"></span>, <span class="glyphicon glyphicon-fire"></span>, <span class="glyphicon glyphicon-certificate"></span>, <span class="glyphicon glyphicon-eye-open"></span>, <span class="glyphicon glyphicon-heart-empty"></span> e <span class="glyphicon glyphicon-plane"></span>. Aten&ccedil;&atilde;o: o c&oacute;digo secreto usa 4 s&iacute;mbolos diferentes.</p>
+		<p>Clique nos 4 bot&otilde;es <span class="glyphicon glyphicon-question-sign"></span> e escolha um s&iacute;mbolo diferente em cada posi&ccedil;&atilde;o. Em seguida, clique em <span class="glyphicon glyphicon-send"></span> para enviar o c&oacute;digo.</p>
+		<p>Para saber se o c&oacute;digo est&aacute; correto, aten&ccedil;&atilde;o &agrave;s pistas:</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-star"></span> ir&aacute; ser exibido para cada s&iacute;mbolo escolhido que estiver na posi&ccedil;&atilde;o correta.</li>
+			<li><span class="glyphicon glyphicon-star-empty"></span> ir&aacute; ser exibido para cada s&iacute;mbolo escolhido que estiver no c&oacute;digo por&eacute;m na posi&ccedil;&atilde;o incorreta.</li>
+			<li>Nada ser&aacute; exibido caso o s&iacute;mbolo n&atilde;o fa&ccedil;a parte do c&oacute;digo para desarmar a bomba.</li>
+		</ul>
+		<p>A brincadeira acaba caso voc&ecirc; consiga os 4 <span class="glyphicon glyphicon-star"></span> ou quando o n&uacute;mero de tentativas se esgotar.</p>
+	</div>
+</div>
+
+

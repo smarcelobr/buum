@@ -1,0 +1,69 @@
+<div class="row">
+	<!-- buum - header - responsivo -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-7707018162758087"
+	     data-ad-slot="2804576072"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<div ng-controller="DesarmaBombaCtrl">
+	<p>Descubra o c&oacute;digo secreto:</p>
+	<div class="palpite row" ng-repeat="palpit in palpites">
+		<div class="col-xs-9 col-md-3">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpit.cor1]}}"><span class="glyphicon {{simbol[palpit.cor1]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpit.cor2]}}"><span class="glyphicon {{simbol[palpit.cor2]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpit.cor3]}}"><span class="glyphicon {{simbol[palpit.cor3]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpit.cor4]}}"><span class="glyphicon {{simbol[palpit.cor4]}}"></span></button>
+			</div>
+		</div>
+		<div class="col-xs-3 col-md-2">
+					<span ng-repeat="resp in avalia(palpit) track by $index" class="resposta glyphicon"
+					   ng-class="{'glyphicon-star':resp==='b','glyphicon-star-empty':resp==='w','glyphicon-remove':resp===''}"></span>
+		</div>
+	</div>
+	<div class="newpalpite row" ng-show="!isAcabou()">
+		<div class="col-xs-9 col-md-3">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpite.cor1]}}" ng-click="palpite.cor1=mudaCor(palpite.cor1)"><span class="glyphicon {{simbol[palpite.cor1]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpite.cor2]}}" ng-click="palpite.cor2=mudaCor(palpite.cor2)"><span class="glyphicon {{simbol[palpite.cor2]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpite.cor3]}}" ng-click="palpite.cor3=mudaCor(palpite.cor3)"><span class="glyphicon {{simbol[palpite.cor3]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[palpite.cor4]}}" ng-click="palpite.cor4=mudaCor(palpite.cor4)"><span class="glyphicon {{simbol[palpite.cor4]}}"></span></button>
+			</div>
+		</div>
+		<div class="col-xs-3 col-md-1">
+		<button type="button" class="btn btn-primary" ng-click="tentar();refreshAds();"><span class="glyphicon glyphicon-send"></span></button>
+		</div>
+	</div>
+	<div class="row parabens" ng-show="isAcertou()">
+		<p><strong>Parab&eacute;ns!</strong> Voc&ecirc; encontrou o c&oacute;digo correto!</p>
+	</div>
+	<div class="row perdeu" ng-show="isPerdeu()">
+		<div class="col-md-12">
+			<p><strong>Perdeu!</strong> Infelizmente acabaram as tentativas.</p>
+			<p>O c&oacute;digo correto &eacute;:</p>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[escolha.cor1]}}"><span class="glyphicon {{simbol[escolha.cor1]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[escolha.cor2]}}"><span class="glyphicon {{simbol[escolha.cor2]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[escolha.cor3]}}"><span class="glyphicon {{simbol[escolha.cor3]}}"></span></button>
+				<button type="button" class="btn btn-default btn-lg pin-{{cores[escolha.cor4]}}"><span class="glyphicon {{simbol[escolha.cor4]}}"></span></button>
+			</div>
+		</div>
+	</div>
+	<div class="reiniciar" ng-show="isAcabou()">
+		<div class="row">
+			<div class="col-sx-11 col-md-4">
+				<button type="button" class="btn btn-primary btn-lg" ng-click="reiniciar()"><span class="glyphicon glyphicon-repeat"></span> Jogar de novo!</button>
+			</div>
+			<div class="col-sx-1 col-md-1" ng-init="permLink=false">
+				<small><a href="" ng-click="permLink=true"><span class="glyphicon glyphicon-link"></span> permlink</a></small>
+			</div>
+			<div class="col-sx-12 col-md-3" ng-show="permLink">
+				<input type="text" value="http://buum.com.br/{{seqCodigo}}"/>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,50 @@
+.pin-black,.pin-black:focus,.pin-black:visited,.pin-black:hover,.pin-black:active {
+  color:black;
+}
+.pin-green,.pin-green:focus,.pin-green:visited,.pin-green:hover,.pin-green:active {
+  color: rgb(32, 210, 48);
+}
+.pin-red,.pin-red:focus,.pin-red:visited,.pin-red:hover,.pin-red:active {
+  color:red;
+}
+.pin-yellow,.pin-yellow:focus,.pin-yellow:visited,.pin-yellow:hover,.pin-yellow:active  {
+  color: rgba(221, 199, 48, 0.94);
+}
+.pin-blue,.pin-blue:focus,.pin-blue:visited,.pin-blue:hover,.pin-blue:active {
+  color:blue;
+}
+.pin-pink,.pin-pink:focus,.pin-pink:visited,.pin-pink:hover,.pin-pink:active {
+  color: rgb(178, 93, 108);
+}
+.pin-orange,.pin-orange:focus,.pin-orange:visited,.pin-orange:hover,.pin-orange:active {
+  color: rgb(223, 134, 59);
+}
+.palpite {
+	margin-top: 0.1em;
+	padding: 0.2em;
+	background-color: lightgray;
+}
+.newpalpite {
+	margin-top: 0.1em;
+	padding: 0.2em;
+	background-color: cornflowerblue;
+}
+.resposta {
+	font-size: normal;
+}
+.reiniciar {
+	margin-top: 1em;
+}
+.parabens,.perdeu {
+	margin-top: 1em;
+}
+.socialBtns {
+	margin: 2em;
+}
+.socialBtns div {
+	display: block;
+}
+#instrucoes {
+	margin: 1em;
+}
+

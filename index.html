@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Descubra o codigo secreto!"/>
+<meta property="og:site_name" content="Buum!"/>
+<meta property="og:url" content="http://buum.com.br/"/>
+<meta property="og:description" content="Um passatempo divertido onde o jogador é desafiado a descobrir o código secreto através de racioncínio lógico. Não é um jogo de azar pois todas as combinações são possíveis de serem descobertas com as 6 tentativas concedidas. Atenção às pistas e teste o seu raciocínio neste jogo divertido."/>
+<meta property="fb:app_id" content="424523531020482"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:image" content="http://buum.com.br/images/buumforshare2.png" />
+<base href="/">
+<title>C&oacute;digo secreto - buum</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="desarmabomba.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="desarmabomba.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'pt-BR'}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27989361-2', 'auto');
+  /*ga('send', 'pageview');  -- codigo executado quando ng-view eh atualizado no controller */
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=424523531020482";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="container" ng-app="desarmaBomba">
+	<div ng-include="'header.html'" ></div>
+	<div ng-view></div>
+	<div ng-include="'instrucoes.html'" ></div>
+	<hr/>
+	<div>
+		<div class="fb-comments" data-href="http://buum.com.br" data-numposts="10" data-colorscheme="light"></div>
+	</div>
+</div>
+</body>
+</html>
